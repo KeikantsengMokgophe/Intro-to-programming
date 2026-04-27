@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //creating a pompt
+
+        // var name = prompt("what's your name?");
+        //   console.log("Hello " + name);
+
+        // var likescats = confirm("do you like cats?");
+        // if (likescats) {
+        //     console.log("you're a cool cat!");
+        // } else {
+        //     console.log("yeah, that's fine. you're still cool!");
+        // }
+
+        // Using alerts
+
+        // alert("javascript is awesome!");
+
+        //The hangman game
+
+        var words = ["javascript", "lion", "zebra", "pancake"];
+
+        var word = words[Math.floor(Math.random() * words.length)];
+        
+        var answerarray = [];
+
+        for (var i = 0; i < word.length; i++) {
+            answerarray[i] = "_";
+        }
+
+        var remainingletters = word.length;
+
+        while (remainingletters > 0) {
+            alert(answerarray.join(" "));
+
+            var guess = prompt("guess a letter, or click cancel to stop playing.");
+
+            if (guess === null) {
+                break;
+
+            } else if (guess.length !== 1) {
+                alert("please enter a single letter.");
+            } else {
+                for (var j = 0; j < word.length; j++) {
+                    if (word[j] = guess) {
+                        answerarray[j] = guess;
+                        remainingletters--;
+                    }
+
+                }
+            }
+        }
+        alert(answerarray.join(" "));
+        alert("good job! the anwer was " + word);
+    </script>
+    
+    var words = ["apple", "car", "tree", "dog", "school", "laptop", "phone", "cat"];
+    var words = [math.floor(math.random() * words.length)];
+    var answerarray = [];
+    for (var i = 0; i < word.length; i++) {
+        answerarray[i] = "_";
+    }
+    
+    var remainingletters = word.length;
+    var guessesleft = 6;
+    var guessedletters [];
+
+    function updatedisplay() {
+        document.getelementbyid("word").innertext = answerarray.join(" ");
+        document.getelementbyid("guesses").innertext = guesses left: " + guessesleft:
+        document.getelementbyid("letters").innertext = guessed: " + guessedletters.join(", ");
+    }
+     guessedletters.push(guess):
+     var correctguess = false;
+     for (var j = 0; j < word.length; j++) {
+        if (word[j] === guess && answerarray[j] === "_") {
+            answerarray[j] = guess;
+            remainingletters--;
+            correctguess = true;
+        }
+     }
+
+     if (!correctguess) {
+        guessesleft--;
+     }
+      updatedisplay();
+</body>
+</html>
+
