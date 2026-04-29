@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var ourfirstfunction = function () {
+        //     console.log("hello world");
+        // };
+
+        // ourfirstfunction();
+
+        // var sayhelloto = function (name) {
+        //     console.log("hello " + name + "!");
+        // };
+        // sayhelloto("kantse");
+
+        // var drawcats = function (howmanytimes) {
+        //     for (var i = 0; i < howmanytimes; i++) {
+        //         console.log(i + " =^.^=");
+        //     }
+        // };
+        // drawcats(5);
+
+        // var printmultipletimes = function (howmanytimes, whattodraw) {
+        //     for (var i = 0; i < howmanytimes; i++) {
+        //         console.log(i + " " + whattodraw);
+        //     }
+        // };
+
+        // printmultipletimes(5, "=^.^=");
+
+        // var printmultipletimes = function (howmanytimes, whattodraw) {
+        //     for (var i = 0; i < howmanytimes; i++) {
+
+        //         console.log(i + " " + whattodraw);
+        //     }
+
+        // };
+        // printmultipletimes(3, " :-) ");
+
+        // var double = function (number) {
+        //     return number * 2;
+        // };
+
+        // console.log(double(3));
+
+        // console.log(double(5) + double(6));
+
+        // console.log (double(double(3)));
+
+        var pickrandomword = function (words) {
+            return words[Math.floor(Math.random() * words.length)];
+
+        };
+
+        var randomwords = ["planet", "worm", "flower", "computer"];
+
+           console.log(pickrandomword(randomwords));
+
+        var randombodyparts = ["face", "nose", "hair",];
+        var randomadjectives = ["smelly", "boring", "stupid",];
+        var randomwords = ["fly", "marmot", "stick", "monkey", "rat"];
+
+        var randomstring = "your " + pickrandomword(randombodyparts) + "is like a " + pickrandomword(randomadjectives) + " " + pickrandomword(randomwords) + "!!!";
+
+
+        console.log(randomstring);
+
+        var fifthletter = function (name) {
+            if (name.length < 5) {
+                return;
+
+            }
+
+            return "the fifth letter of your name is " + name[4] + ".";
+        };
+
+       console.log( fifthletter("nicholas"));
+
+        var medalforscore = function (score) {
+            if (score < 3) {
+                return "bronze";
+            }
+            if (score < 7) {
+                return "silver";
+            }
+
+            return "gold";
+        };
+        console.log(medalforscore(2));
+        console.log(medalforscore(5));
+        console.log(medalforscore(20));
+
+        var double = function (number) {
+            return number * 2;
+        };
+
+        function double(number) {
+            return number * 2;
+        }
+
+        
+
+
+    
+         
+
+        
+
+
+
+    </script>
+
+</body>
+
+</html>
