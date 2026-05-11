@@ -1,0 +1,55 @@
+//create an event listener for the print button, with a handler function called printView
+var printButton = document.getElementById("printable");
+printButton.addEventListener("click", printView);
+
+//create an event listener for the add button, with a handler function called addTheThing
+var addButton = document.getElementById("addIt");
+addButton.addEventListener("click", addTheThing);
+
+// create a blank array named myList
+var myList = [];
+
+/* create a variable, myListArea, which references the element with the id of 'wishList' */
+var myListArea = document.getElementById("wishList");
+
+/* function addTheThing gets the value of the text field and then passes it to a function called addToTheList. It then runs a function called resetInput */
+function addTheThing() {
+  var theThing = document.getElementById("iWant");
+
+  addToTheList(theThing);
+  resetInput(theThing);
+}
+
+/* function addToTheList, which takes one parameter, 
+called thingToAdd, pushes it into the myList array, and then 
+adds it to myListArea */
+function addToTheList(param) {
+  myList.push(param.value);
+  let newListItem = document.createElement("li");
+  newListItem.innerHTML = myList[myList.length - 1];
+
+  myListArea.appendChild(newListItem); //adds child element to end of parent elements list of children
+}
+
+/* function resetInput, which resets the value of the
+input field to blank ("") */
+function resetInput(inputToReset) {
+  inputToReset.value = "";
+}
+
+/*function printView, which outputs a nicely formatted 
+view of the list  */
+function printView() {
+    let listPage = document.getElementById("listPage");
+    let formArea = document.getElementById("formArea");
+  
+    formArea.style.display = "none"; //makes the element invisible
+    listPage.className = "print";
+    myListArea.innerHTML = "";
+    myList.sort();
+  
+    for (var i = 0; i < myList.length; i++) {
+      myListArea.innerHTML += "<li>" + myList[i] + "</li>";
+    }
+    //window.print();
+  }
